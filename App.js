@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Pokemon from './src/pages/Pokemon';
+import Favority from './src/pages/Favority';
 import Home from './src/pages/Home';
 import { Button } from 'react-native';
 
@@ -25,12 +26,13 @@ export default function App() {
               headerTintColor: '#FFF',
               headerShown: true,
               headerRight: () => (
-                <Button title="+" onPress={() => navigation.navigate('Pokemon')}  ></Button>
+                <Button title="Favoritos" onPress={() => navigation.navigate('Favority')}  ></Button>
               )
             
           })}
         />
         <Stack.Screen name="Pokemon" component={Pokemon} />
+        <Stack.Screen name="Favority" component={Favority} />
       </Stack.Navigator>
     </NavigationContainer>
   );
